@@ -1,24 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Mulish:wght@400;500;700&display=swap;');
-
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
     grid-template-rows: repeat(10, 1fr);
-    
     gap: 10px;
     max-width: auto;
     font-family: 'Mulish', sans-serif;
     color: #F5F5F5;
     padding: 50px;
     line-height: 1.6;
-    background: linear-gradient(180deg, #0D0D0D, #2C0000, #3b0000);
+    background: linear-gradient(180deg, #0D0D0D, #200000, #2a0000);
 }
 
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Roboto', serif;
+    
     color: #a53c3c;
     line-height: 1.2;
     letter-spacing: 0.5px;
