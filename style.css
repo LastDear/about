@@ -5,13 +5,13 @@
 body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-rows: repeat(9, 1fr);
     gap: 10px;
     max-width: auto;
     font-family: 'Mulish', sans-serif;
     color: #F5F5F5;
     padding: 50px;
-    line-height: 1.6;
+    line-height:  1.6;
     background: linear-gradient(180deg, #0D0D0D, #200000, #2a0000);
 }
 
@@ -115,5 +115,3 @@ h1, h2, h3, h4, h5 {
 .link3 {
     grid-column: 5 / 6;
 }
-
-
