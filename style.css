@@ -97,7 +97,7 @@ h1, h2, h3, h4, h5 {
 .media {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    max-height: 40px;
+    max-height: auto;
     
 }
 .icons {
