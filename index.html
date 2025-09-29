@@ -71,8 +71,51 @@
             <img src="images/lvl.jpg" alt="Компетенция 3">
         </div>
     </div>
-    <div>
-
+    <div id="imageModal" class="image-modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="modalImage">
     </div>
+
+    <script>
+        // Получаем элементы
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const closeBtn = document.querySelector('.close-modal');
+
+        // Получаем все изображения в блоках с классом image-row
+        const images = document.querySelectorAll('.image-row img');
+
+        // Добавляем обработчик клика для каждого изображения
+        images.forEach(img => {
+            img.addEventListener('click', function () {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+                modalImg.alt = this.alt;
+                document.body.style.overflow = 'hidden'; // Блокируем прокрутку фона
+            });
+        });
+
+        // Закрытие модального окна при клике на крестик
+        closeBtn.addEventListener('click', function () {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // Возвращаем прокрутку
+        });
+
+        // Закрытие модального окна при клике вне изображения
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Возвращаем прокрутку
+            }
+        });
+
+        // Закрытие модального окна при нажатии клавиши Escape
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.style.display === 'flex') {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Возвращаем прокрутку
+            }
+        });
+    </script>
 </body>
 </html>
